@@ -1,0 +1,89 @@
+@use '../custom' as *;
+@use '../components/mixin' as *;
+
+.footer {
+    padding-top: 2rem;
+    background-color: $footer;
+}
+
+// Contact Box
+.contact-box {
+    position: relative;
+
+    &__icon {
+        width: 3rem;
+        stroke: $primary;
+        padding-top: .6rem;
+
+        @include media-breakpoint-up(sm) {
+            width: 3.5rem;
+        }
+    }
+
+    &__info {
+        padding: .5rem;
+        font-weight: 700;
+
+        &--title {
+            color: $white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        &--subtitle {
+            color: $gray-700;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+    }
+}
+
+// Social Media
+.footer-sm {
+
+    a {
+        color: $white;
+
+        i {
+            font-size: 1.5rem;
+            margin-left: 1.3rem;
+        }
+    }
+}
+
+// Copyright
+.footer-bottom {
+    background-color: $black;
+
+    &__copy {
+        color: $gray-700;
+        font-weight: 500;
+        font-size: 1.5rem;
+
+        a {
+            color: $gray-400;
+            text-decoration: none;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+// Back To Top Button 
+.btt {
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    z-index: 9999;
+
+    i {
+        color: $white;
+        font-size: 1.5rem;
+        @include absCenter;
+    }
+
+}
